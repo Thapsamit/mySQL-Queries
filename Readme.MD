@@ -19,3 +19,20 @@ Code:-
 
    ```
 
+
+# 2 - PADS Problem
+
+
+https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+   select CONCAT(Name,'(',SUBSTRING(Occupation,1,1),')') from Occupations order by Name;
+
+   select "There are a total of ",count(Occupation) as OccCount,
+   IF(Occupation="Actor","actors.",IF(Occupation="Singer","singers.",IF(Occupation="Doctor","doctors.","professors."))) from Occupations group by Occupation order by OccCount;
+
+   ```
