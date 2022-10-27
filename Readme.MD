@@ -120,3 +120,18 @@ Code:-
    
    
    
+# 8 - weather-observation-station-11
+
+
+https://www.hackerrank.com/challenges/weather-observation-station-11/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+   select distinct(CITY) from STATION where SUBSTRING(CITY,1,1) not in ('a','e','i','o','u') or SUBSTRING(CITY,-1,1) not in ('a','e','i','o','u');
+
+
+   ```
+   
