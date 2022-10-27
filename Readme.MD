@@ -101,3 +101,22 @@ Code:-
 
 
    ```
+   
+   
+   
+# 7 - Placements
+
+
+https://www.hackerrank.com/challenges/placements/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   select NAME from STUDENTS S, PACKAGES P1,FRIENDS F,PACKAGES P2 WHERE S.ID=P1.ID AND S.ID=F.ID AND P2.ID=F.FRIEND_ID AND P2.SALARY>P1.SALARY ORDER BY P2.SALARY;
+
+
+   ```
+   
+   
+   
