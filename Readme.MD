@@ -85,3 +85,19 @@ Code:-
 
 
    ```
+   
+   
+   
+#  6 - Weather Station 20
+
+
+https://www.hackerrank.com/challenges/weather-observation-station-20/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   select ROUND(S.LAT_N,4) from STATION as S where(select COUNT(LAT_N) from STATION where LAT_N<S.LAT_N) = (select COUNT(LAT_N) from STATION where LAT_N > S.LAT_N)
+
+
+   ```
