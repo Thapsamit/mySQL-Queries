@@ -135,3 +135,29 @@ Code:-
 
    ```
    
+   
+   
+   
+ # 9 - Contest Leaderboard
+
+
+https://www.hackerrank.com/challenges/contest-leaderboard/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+  select hacker_id,name,sum(total_score) as total_score 
+From(Select s.hacker_id,name,challenge_id,max(score) as total_score
+    from hackers h,submissions s where h.hacker_id=s.hacker_id and
+    score>0 group by s.hacker_id,challenge_id,name
+    ) as subq
+group by hacker_id,name
+order by total_score desc,hacker_id;
+
+
+   ```
+   
+   
+   
