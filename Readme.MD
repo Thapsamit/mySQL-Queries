@@ -177,3 +177,22 @@ Code:-
 
    ```
    
+   
+   
+   
+   
+   
+# 11 - Top Earners
+
+
+https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   select max(months*salary),count(*) from Employee where months*salary = (select max(months*salary) from Employee)
+
+
+   ```
+   
