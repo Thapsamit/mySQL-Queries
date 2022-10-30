@@ -214,3 +214,17 @@ Code:-
    ```
    
    
+   
+ # 13 - Higher than 75 marks
+
+https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   select Name from Students where marks>75 order by substr(Name,-3,3),id;
+
+
+   ```
+   
