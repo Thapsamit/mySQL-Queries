@@ -196,3 +196,21 @@ Code:-
 
    ```
    
+   
+   
+# 12 - Weather Observation 17
+
+
+https://www.hackerrank.com/challenges/weather-observation-station-17/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+   select Round(long_w,4) from station where lat_n>38.7780 order by lat_n limit 1
+
+
+   ```
+   
+   
