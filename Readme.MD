@@ -228,3 +228,17 @@ Code:-
 
    ```
    
+
+
+# 14 - The Blunder(using round function in integr)
+
+https://www.hackerrank.com/challenges/the-blunder/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   select ceil(avg(salary)-avg(replace(salary,0,''))) from Employees;
+
+
+   ```
