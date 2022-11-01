@@ -242,3 +242,19 @@ Code:-
 
 
    ```
+
+
+
+
+# 15 - Weather observation 12
+
+https://www.hackerrank.com/challenges/weather-observation-station-12/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+   select distinct(city) from STATION where lower(substr(city,1,1)) not in('a','e','i','o','u') and lower(substr(city,-1,1)) not in('a','e','i','o','u')
+
+   ```
