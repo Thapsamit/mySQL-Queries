@@ -274,3 +274,8 @@ Code:-
 ),4) from STATION
 
    ```
+   
+   
+   # for rounding to nearest integer
+   
+   select Round(avg(Population)) from CITY;
