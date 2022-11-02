@@ -258,3 +258,19 @@ Code:-
    select distinct(city) from STATION where lower(substr(city,1,1)) not in('a','e','i','o','u') and lower(substr(city,-1,1)) not in('a','e','i','o','u')
 
    ```
+
+
+# 16 - weather-observation-station-19 (Euclidean distance)
+
+https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true
+
+
+Code:-
+    
+   ``` 
+   
+   select Round((
+   SQRT(Power((max(Lat_n)-min(lat_n)),2) + Power((max(Long_w)-min(long_w)),2))
+),4) from STATION
+
+   ```
