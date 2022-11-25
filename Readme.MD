@@ -13,7 +13,7 @@ https://www.hackerrank.com/challenges/binary-search-tree-1/problem
 
 Code:-
     
-   ``` 
+   ```sql
    select N,IF(N in (select P from BST) and P is NULL,"Root",IF(N in (select P from BST)  
    and P is not NULL,"Inner","Leaf")) from BST order by N
 
@@ -28,7 +28,7 @@ https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select CONCAT(Name,'(',SUBSTRING(Occupation,1,1),')') from Occupations order by Name;
 
@@ -47,7 +47,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-8/problem?isFu
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select CITY from STATION where ((SUBSTRING(CITY,1,1) in ('a','e','i','o','u')) and ((SUBSTRING(CITY,-1,1) in ('a','e','i','o','u'))));
 
@@ -62,7 +62,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-18/problem?isF
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select round(abs(min(LAT_N)-max(LAT_N))+abs(min(LONG_W)-max(LONG_W)),4) from STATION;
 
@@ -79,7 +79,7 @@ https://www.hackerrank.com/challenges/the-report/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select IF(G.GRADE<8,NULL,S.NAME),G.GRADE,S.MARKS from STUDENTS as S,GRADES as G where S.MARKS>=G.MIN_MARK and S.MARKS<=G.MAX_MARK order by G.GRADE desc,S.NAME,S.MARKS;
 
@@ -96,7 +96,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-20/problem?isF
 
 Code:-
     
-   ``` 
+   ```sql 
    select ROUND(S.LAT_N,4) from STATION as S where(select COUNT(LAT_N) from STATION where LAT_N<S.LAT_N) = (select COUNT(LAT_N) from STATION where LAT_N > S.LAT_N)
 
 
@@ -112,7 +112,7 @@ https://www.hackerrank.com/challenges/placements/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    select NAME from STUDENTS S, PACKAGES P1,FRIENDS F,PACKAGES P2 WHERE S.ID=P1.ID AND S.ID=F.ID AND P2.ID=F.FRIEND_ID AND P2.SALARY>P1.SALARY ORDER BY P2.SALARY;
 
 
@@ -128,7 +128,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-11/problem?isF
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select distinct(CITY) from STATION where SUBSTRING(CITY,1,1) not in ('a','e','i','o','u') or SUBSTRING(CITY,-1,1) not in ('a','e','i','o','u');
 
@@ -146,7 +146,7 @@ https://www.hackerrank.com/challenges/contest-leaderboard/problem?isFullScreen=t
 
 Code:-
     
-   ``` 
+   ```sql 
    
   select hacker_id,name,sum(total_score) as total_score 
 From(Select s.hacker_id,name,challenge_id,max(score) as total_score
@@ -170,7 +170,7 @@ https://www.hackerrank.com/challenges/full-score/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    
   select h.hacker_id,h.name from submissions s join challenges c on s.challenge_id=c.challenge_id join difficulty d on c.difficulty_level=d.difficulty_level join hackers h on h.hacker_id=s.hacker_id where s.score=d.score and c.difficulty_level=d.difficulty_level group by h.hacker_id,h.name having count(s.hacker_id)>1 order by count(s.hacker_id) desc,h.hacker_id;
 
@@ -190,7 +190,7 @@ https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen
 
 Code:-
     
-   ``` 
+   ```sql 
    select max(months*salary),count(*) from Employee where months*salary = (select max(months*salary) from Employee)
 
 
@@ -206,7 +206,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-17/problem?isF
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select Round(long_w,4) from station where lat_n>38.7780 order by lat_n limit 1
 
@@ -222,7 +222,7 @@ https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=tr
 
 Code:-
     
-   ``` 
+   ```sql 
    select Name from Students where marks>75 order by substr(Name,-3,3),id;
 
 
@@ -237,7 +237,7 @@ https://www.hackerrank.com/challenges/the-blunder/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    select ceil(avg(salary)-avg(replace(salary,0,''))) from Employees;
 
 
@@ -253,7 +253,7 @@ https://www.hackerrank.com/challenges/weather-observation-station-12/problem?isF
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select distinct(city) from STATION where lower(substr(city,1,1)) not in('a','e','i','o','u') and lower(substr(city,-1,1)) not in('a','e','i','o','u')
 
@@ -267,7 +267,7 @@ https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true
 
 Code:-
     
-   ``` 
+   ```sql 
    
    select Round((
    SQRT(Power((max(Lat_n)-min(lat_n)),2) + Power((max(Long_w)-min(long_w)),2))
@@ -277,5 +277,6 @@ Code:-
    
    
    # for rounding to nearest integer
-   
+   ```sql
    select Round(avg(Population)) from CITY;
+   ```
